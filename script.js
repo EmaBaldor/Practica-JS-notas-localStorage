@@ -4,6 +4,9 @@
  function iniciar(){
     var btnAgregar = document.getElementById("BtnAgregar");
     btnAgregar.addEventListener("click", clickBtnAgregar)
+
+    var btnBorrar = document.getElementById("BtnBorrar");
+    btnBorrar.addEventListener("click", clickBtnBorrar)
 }
 
 function clickBtnAgregar() {
@@ -22,6 +25,14 @@ function clickBtnAgregar() {
     mostrarNotas();
     
 }
+
+function clickBtnBorrar() {
+    
+    //borro el localstorage
+    localStorage.clear();
+    mostrarNotas();
+        
+    }
 
 function mostrarNotas(){
 //tre el div notas
